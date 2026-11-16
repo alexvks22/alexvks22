@@ -51,6 +51,10 @@ Founder and Lead Instructor at **DataTutor.gr**, having trained and upskilled **
 * **Stack:** Python, XGBoost, Scikit-Learn (DictVectorizer), FastAPI, Uvicorn, Docker, Render, Pydantic, Jupyter Notebook
 * **Architecture:** Architecture: Offline feature engineering, statistical noise filtering, and model benchmark pipeline (train.py) that serializes a tuned XGBoost booster into a binary artifact, paired with a containerized FastAPI web service (predict.py) exposing /predict and /health endpoints with strict Pydantic payload validation, deployed live via Docker on Render.
 
+### 🏛️ [Athens Airbnb Analytics Engineering Pipeline](https://github.com/alexvks22/athens-airbnb-dbt-pipeline)
+*End-to-end Medallion data pipeline transforming raw short-term rental datasets into executive-ready dimensional marts with automated data quality testing and CI/CD.*
+- **Stack:** dbt-core, DuckDB, Python, SQL, Jinja, GitHub Actions
+- **Architecture:** Python ingestion script loading compressed Inside Airbnb datasets into a DuckDB Bronze layer, paired with Silver staging views (`clean_currency` & `clean_percentage` Jinja macros, `QUALIFY ROW_NUMBER()` deduplication, and `is_active_listing` referential integrity flags) and Gold star-schema marts (`dim_hosts`, `fact_listings`, `dim_neighborhood`) built via pre-aggregated CTEs to prevent join fan-outs, validated by 16 automated dbt tests and GitHub Actions CI.
 ---
 
 ## 💼 Professional Experience
